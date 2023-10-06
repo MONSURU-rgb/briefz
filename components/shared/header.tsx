@@ -13,9 +13,10 @@ export const NotSignedInUserHeader = () => {
   const [opened, { toggle }] = useDisclosure();
 
   return (
-    <header className="py-32 px-[clamp(16px,5vw,80px)] first-header z-30 sticky top-0">
-      <BZHeader />
-      <div className="relative">
+    <div className="relative">
+      <header className="py-32 px-[clamp(16px,5vw,80px)] first-header z-30 sticky top-0">
+        <BZHeader />
+
         <div className="flex gap-4 items-center justify-center">
           <section className="flex gap-3 items-center">
             <LightDark />
@@ -28,7 +29,7 @@ export const NotSignedInUserHeader = () => {
             {opened && (
               <NavList
                 sectionclass={clsx(
-                  "hidden flex-col max-mobile:!flex gap-24 absolute top-[79px] !bg-[var(--bg-header)] p-6 right-0 backdrop-blur-md z-50 rounded-b-lg"
+                  "hidden flex-col max-mobile:!flex gap-24 absolute top-[70px] !bg-[var(--bg-header)] p-6 right-0 backdrop-blur-md z-50 rounded-b-lg"
                 )}
                 articleclass="flex-col"
                 ulclass="flex-col"
@@ -37,7 +38,7 @@ export const NotSignedInUserHeader = () => {
           </section>
           <NavList sectionclass="max-mobile:hidden" />
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
