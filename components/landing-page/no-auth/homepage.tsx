@@ -21,7 +21,7 @@ export function NonAuthenticatedUserHomepage() {
             <button className="action-button bg-[var(--blue-600)] px-32 text-white max-[343px]:w-full items-center justify-center">
               Request brief
             </button>
-            <button className="flex items-center justify-center gap-2 action-button px-24 text-[var(--blue-600)] bg-white border-[1px_solid_var(--blue-600)] max-[343px]:w-full">
+            <button className="flex items-center justify-center gap-2 action-button px-24 text-[var(--blue-600)] bg-white border border-[var(--blue-600)] max-[343px]:w-full">
               <PlayIcon />
               <span>Watch Demo</span>
             </button>
