@@ -1,39 +1,40 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
-import { PlayIcon } from "@/components";
+import { HeroSection } from "./hero-section";
+import { AstromLogo, MetabluIcon } from "@/components";
+import { useTheme } from "next-themes";
 
 export function NonAuthenticatedUserHomepage() {
+  const { theme, setTheme } = useTheme();
   return (
     <div>
-      <section className="text-blue-400 pt-128 pl-76 flex w-full justify-between max-[755px]:flex-col max-[755px]:gap-[clamp(60px,5vw,72px)] relative z-10 pr-76">
-        <section className="max-w-[650px] zinc-text">
-          <h2 className="blue-text">Generate</h2>
-          <h2 className="black-text">Professional</h2>
-          <h2 className="black-text">
-            Briefs In <span className="blue-text">Minutes </span>
-          </h2>
-          <h3 className="pt-24 text-[var(--zinc-500)] max-w-[600px]">
-            Briefz is a dynamic brief generator. It allows designers to easily
-            generate design briefs for their project.
-          </h3>
+      <HeroSection />
+      <section className="pt-120 flex flex-col gap-80">
+        <h2 className="text-[var(--blue-gray-900)] font-poppins text-[clamp(30px,3.6vw,56px)] dark:text-white text-center">
+          Our Top Partners
+        </h2>
 
-          <article className="flex gap-24 pt-60 justify-center max-[343px]:flex-col">
-            <button className="action-button bg-[var(--blue-600)] px-32 text-white max-[343px]:w-full items-center justify-center">
-              Request brief
-            </button>
-            <button className="flex items-center justify-center gap-2 action-button px-24 text-[var(--blue-600)] bg-white border border-[var(--blue-600)] max-[343px]:w-full">
-              <PlayIcon />
-              <span>Watch Demo</span>
-            </button>
-          </article>
-        </section>
-
-        <Image
-          src="/images/homepage-system.png"
-          fill
-          className="!relative aspect-auto !h-500 !w-[clamp(500px,45vw,720px)] flex-grow max-[755px]:!w-full"
-          alt="screen image"
-        />
+        <article className="scroll-container">
+          <figure className="flex gap-120">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <AstromLogo
+                color={theme == "light" ? "#0f172a" : "white"}
+                key={i}
+              />
+            ))}
+          </figure>
+        </article>
+        <article className="scroll-container">
+          <figure className="flex gap-260">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <MetabluIcon
+                color={theme == "light" ? "#0f172a" : "white"}
+                key={i}
+              />
+            ))}
+          </figure>
+        </article>
       </section>
     </div>
   );

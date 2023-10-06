@@ -9,6 +9,7 @@
   --zinc-900: #18181b;
   --bg-header: rgba(245, 249, 255, 0.8);
   --zinc-500: #71717a;
+  --blue-gray-900: #0f172a;
 }
 
 .first-header {
@@ -47,4 +48,24 @@
 
 .action-button {
   @apply py-12 flex items-center rounded-[10px] text-16 whitespace-nowrap;
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-container figure {
+  display: inline-flex;
+  animation: scroll 60s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
