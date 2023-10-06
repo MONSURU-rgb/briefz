@@ -8,6 +8,7 @@
   --blue-600: #2563eb;
   --zinc-900: #18181b;
   --bg-header: rgba(245, 249, 255, 0.8);
+  --zinc-500: #71717a;
 }
 
 .first-header {
@@ -38,4 +39,12 @@
 
 .black-text {
   @apply font-poppins text-[clamp(32px,4.5vw,72px)] text-[var(--zinc-900)] dark:text-white leading-[120%];
+}
+
+.zinc-text {
+  @apply font-poppins text-24 font-normal leading-[160%];
+}
+
+.action-button {
+  @apply py-12 flex items-center rounded-[10px] text-16 whitespace-nowrap;
 }
