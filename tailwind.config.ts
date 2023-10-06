@@ -51,7 +51,7 @@ const config: Config = {
         200: "clamp(170px,15vw,220px)",
         80: "clamp(32px,4.5vw,80px)",
         76: "clamp(28px,4.4vw,76px)",
-        500: "clamp(280px,31.25vw,500px)",
+        500: "clamp(380px,31.25vw,500px)",
       },
 
       fontSize: {

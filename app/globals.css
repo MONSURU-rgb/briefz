@@ -33,9 +33,9 @@
 }
 
 .blue-text {
-  @apply font-poppins text-[clamp(40px,4.5vw,72px)] text-[var(--blue-600)] leading-[120%];
+  @apply font-poppins text-[clamp(32px,4.5vw,72px)] text-[var(--blue-600)] leading-[120%];
 }
 
 .black-text {
-  @apply font-poppins text-[clamp(40px,4.5vw,72px)] text-[var(--zinc-900)] dark:text-white leading-[120%];
+  @apply font-poppins text-[clamp(32px,4.5vw,72px)] text-[var(--zinc-900)] dark:text-white leading-[120%];
 }

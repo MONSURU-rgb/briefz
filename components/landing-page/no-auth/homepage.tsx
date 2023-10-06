@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function NonAuthenticatedUserHomepage() {
   return (
-    <div className="text-blue-400 pt-128 pl-76 flex w-full justify-between max-[755px]:flex-col max-[755px]:gap-45">
+    <div className="text-blue-400 pt-128 pl-76 flex w-full justify-between max-[755px]:flex-col max-[755px]:gap-[clamp(60px,5vw,72px)] relative z-10">
       <section className="balance">
         <h2 className="blue-text">Generate</h2>
         <h2 className="black-text">Professional</h2>
