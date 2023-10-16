@@ -22,6 +22,9 @@
 .flex-center {
   @apply flex items-center;
 }
+.flex-start {
+  @apply flex !justify-start items-start;
+}
 
 .login-button {
   @apply py-10 px-10 text-center flex-center rounded-[10px] border border-[0.5px_solid_#2563EB] hover:animate-pulse hover:ease-out hover:duration-300;

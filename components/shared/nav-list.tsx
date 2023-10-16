@@ -31,7 +31,7 @@ export default function NavList({
         ))}
       </ul>
 
-      <article className={clsx("flex-center gap-16", articleclass)}>
+      <article className={clsx("flex justify-start gap-16", articleclass)}>
         <button className="login-button text-[var(--blue-600)]">Login</button>
         <button className="sign-button whitespace-nowrap">Sign Up</button>
       </article>

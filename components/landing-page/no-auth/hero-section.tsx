@@ -17,7 +17,7 @@ export function HeroSection() {
             generate design briefs for their project.
           </h3>
 
-          <article className="flex gap-24 pt-60 justify-center max-[343px]:flex-col">
+          <article className="flex gap-24 pt-60 justify-start max-[343px]:flex-col">
             <button className="action-button bg-[var(--blue-600)] px-32 text-white max-[343px]:w-full items-center justify-center">
               Request brief
             </button>
