@@ -17,11 +17,20 @@
   /* For light mode */
   box-shadow: 0 0 5.62963px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.1);
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-out.active {
+  opacity: 1;
 }
 
 /* For dark mode */

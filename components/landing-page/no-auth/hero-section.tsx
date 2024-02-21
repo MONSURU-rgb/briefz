@@ -1,15 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PlayIcon } from "@/components";
 
+const TextCarousel = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
+  const texts = ["Minutes.", "No Time", "A Flash"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) =>
+        prevIndex === texts.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval); // Clear the interval on unmount
+  }, []);
+
+  return (
+    <span className="text-carousel">
+      <span className="fade-in-out active">{texts[currentTextIndex]}</span>
+    </span>
+  );
+};
+
 export function HeroSection() {
+  const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
+  const texts = ["Minutes.", "No Time", "A Flash"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => {
+        if (prevIndex === texts.length - 1) {
+          return 0;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 5000);
+
+    return () => clearInterval(interval); // Clear the interval on unmount
+  }, []);
+
   return (
     <section className="text-blue-400 pt-128 pl-76 flex w-full justify-between max-[755px]:flex-col max-[755px]:gap-[clamp(60px,5vw,72px)] relative z-10 overflow-hidden">
       <section className="max-w-[650px] zinc-text pr-76">
         <h2 className="blue-text">Generate</h2>
         <h2 className="black-text">Professional</h2>
         <h2 className="black-text">
-          Briefs In <span className="blue-text">Minutes </span>
+          Briefs In{" "}
+          <span className="blue-text">
+            <TextCarousel />
+          </span>
         </h2>
         <h3 className="pt-24 text-[var(--zinc-500)] max-w-[600px]">
           Briefz is a dynamic brief generator. It allows designers to easily
