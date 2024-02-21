@@ -62,6 +62,7 @@ const config: Config = {
         35: "clamp(20px,2.2vw,35px)",
         14: "clamp(10px,0.9vw,14px)",
         12: "clamp(9px,0.8vw,12px)",
+        40: "clamp(32px,2.4vw,40px)",
       },
 
       fontFamily: {

@@ -21,7 +21,8 @@ export default function RootLayout({
       <body className="bg-white dark:bg-black text-white dark:text-black">
         <ThemeProvider
           attribute="class"
-          forcedTheme={resolvedTheme || undefined}>
+          forcedTheme={resolvedTheme || undefined}
+        >
           <MantineProvider>
             <NotSignedInUserHeader />
             {children}

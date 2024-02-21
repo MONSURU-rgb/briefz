@@ -2,7 +2,7 @@
 
 import React from "react";
 import { HeroSection } from "./hero-section";
-import { AstromLogo, MetabluIcon } from "@/components";
+import { AstromLogo, HowItWorks, MetabluIcon } from "@/components";
 import { useTheme } from "next-themes";
 
 export function NonAuthenticatedUserHomepage() {
@@ -11,7 +11,7 @@ export function NonAuthenticatedUserHomepage() {
     <div>
       <HeroSection />
       <section className="pt-120 flex flex-col gap-80">
-        <h2 className="text-[var(--blue-gray-900)] font-poppins text-[clamp(30px,3.6vw,56px)] dark:text-white text-center">
+        <h2 className="text-[var(--blue-gray-900)] font-bold font-poppins text-[clamp(30px,3.6vw,56px)] dark:text-white text-center">
           Our Top Partners
         </h2>
 
@@ -36,6 +36,7 @@ export function NonAuthenticatedUserHomepage() {
           </figure>
         </article>
       </section>
+      <HowItWorks />
     </div>
   );
 }

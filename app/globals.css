@@ -6,10 +6,29 @@
 
 :root {
   --blue-600: #2563eb;
+  --dark-blue-600: #4479ee;
   --zinc-900: #18181b;
   --bg-header: rgba(245, 249, 255, 0.8);
   --zinc-500: #71717a;
   --blue-gray-900: #0f172a;
+}
+
+.card {
+  /* For light mode */
+  box-shadow: 0 0 5.62963px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* For dark mode */
+@media (prefers-color-scheme: dark) {
+  .card {
+    box-shadow: 0 0 5.62963px 0 rgba(255, 255, 255, 0.2);
+  }
 }
 
 .first-header {
@@ -71,4 +90,17 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    background: var(--blue-600);
+  }
+  to {
+    background: var(--dark-blue-600);
+  }
+}
+
+.fade-in-button {
+  animation: fadeIn ease-out 300ms;
 }
