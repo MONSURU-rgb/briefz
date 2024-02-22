@@ -15,14 +15,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { resolvedTheme } = useTheme();
+  const { themes } = useTheme();
   return (
     <html lang="en">
       <body className="bg-white dark:bg-black text-white dark:text-black">
-        <ThemeProvider
-          attribute="class"
-          forcedTheme={resolvedTheme || undefined}
-        >
+        <ThemeProvider attribute="class" themes={["dark", "light"]}>
           <MantineProvider>
             <NotSignedInUserHeader />
             {children}

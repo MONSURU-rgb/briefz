@@ -2,11 +2,20 @@
 
 import React from "react";
 import { HeroSection } from "./hero-section";
-import { AstromLogo, HowItWorks, MetabluIcon } from "@/components";
+import {
+  AstromLogo,
+  CiciooLog,
+  HowItWorks,
+  MetabluIcon,
+  ViewoLogo,
+  Vrocket,
+  WeavyLogo,
+} from "@/components";
 import { useTheme } from "next-themes";
 
 export function NonAuthenticatedUserHomepage() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
+
   return (
     <div>
       <HeroSection />
@@ -17,19 +26,28 @@ export function NonAuthenticatedUserHomepage() {
 
         <article className="scroll-container">
           <figure className="flex gap-120">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <AstromLogo
-                color={theme == "light" ? "#0f172a" : "white"}
-                key={i}
-              />
-            ))}
+            {Array.from({ length: 5 }).map((_, i) => {
+              return (
+                <>
+                  {" "}
+                  <AstromLogo
+                    color={resolvedTheme == "light" ? "#0f172a" : "white"}
+                    key={i}
+                  />
+                  <CiciooLog />
+                  <WeavyLogo />
+                  <Vrocket />
+                  <ViewoLogo />
+                </>
+              );
+            })}
           </figure>
         </article>
         <article className="scroll-container">
           <figure className="flex gap-260">
             {Array.from({ length: 20 }).map((_, i) => (
               <MetabluIcon
-                color={theme == "light" ? "#0f172a" : "white"}
+                color={resolvedTheme == "light" ? "#0f172a" : "white"}
                 key={i}
               />
             ))}

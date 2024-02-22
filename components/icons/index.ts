@@ -3,3 +3,7 @@ export * from "./play-icon";
 export * from "./astrom-logo";
 export * from "./metablu-icon";
 export * from "./galaclock";
+export * from "./cicio-logo";
+export * from "./weavy-logo";
+export * from "./vrocket";
+export * from "./viewo-logo";
