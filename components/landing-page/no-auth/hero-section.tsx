@@ -1,27 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PlayIcon } from "@/components";
+import ReactTextTransition, { presets } from "react-text-transition";
 
-const TextCarousel = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
-  const texts = ["Minutes.", "No Time", "A Flash"];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) =>
-        prevIndex === texts.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
-
-    return () => clearInterval(interval); // Clear the interval on unmount
-  }, []);
-
-  return (
-    <span className="text-carousel">
-      <span className="fade-in-out active">{texts[currentTextIndex]}</span>
-    </span>
-  );
-};
+// Creating a wobbly spring preset using React text transition package
 
 export function HeroSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
@@ -49,7 +31,9 @@ export function HeroSection() {
         <h2 className="black-text">
           Briefs In{" "}
           <span className="blue-text">
-            <TextCarousel />
+            <ReactTextTransition inline springConfig={presets.gentle}>
+              {texts[currentTextIndex]}
+            </ReactTextTransition>
           </span>
         </h2>
         <h3 className="pt-24 text-[var(--zinc-500)] max-w-[600px]">
