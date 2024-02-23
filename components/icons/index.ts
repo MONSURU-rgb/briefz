@@ -7,3 +7,7 @@ export * from "./cicio-logo";
 export * from "./weavy-logo";
 export * from "./vrocket";
 export * from "./viewo-logo";
+export * from "./buildaa-logo";
+export * from "./hapi-logo";
+export * from "./logo-ipsum";
+export * from "./virtuo-logo";

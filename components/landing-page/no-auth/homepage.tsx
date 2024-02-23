@@ -4,10 +4,14 @@ import React from "react";
 import { HeroSection } from "./hero-section";
 import {
   AstromLogo,
+  BuildaaLogo,
   CiciooLog,
+  HapiLogo,
   HowItWorks,
+  LogoIpsum,
   MetabluIcon,
   ViewoLogo,
+  VirtuoLogo,
   Vrocket,
   WeavyLogo,
 } from "@/components";
@@ -28,7 +32,7 @@ export function NonAuthenticatedUserHomepage() {
           <figure className="flex gap-120">
             {Array.from({ length: 5 }).map((_, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   {" "}
                   <AstromLogo
                     color={resolvedTheme == "light" ? "#0f172a" : "white"}
@@ -38,18 +42,24 @@ export function NonAuthenticatedUserHomepage() {
                   <WeavyLogo />
                   <Vrocket />
                   <ViewoLogo />
-                </>
+                </React.Fragment>
               );
             })}
           </figure>
         </article>
         <article className="scroll-container">
           <figure className="flex gap-260">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <MetabluIcon
-                color={resolvedTheme == "light" ? "#0f172a" : "white"}
-                key={i}
-              />
+            {Array.from({ length: 5 }).map((_, i) => (
+              <React.Fragment key={i}>
+                <MetabluIcon
+                  color={resolvedTheme == "light" ? "#0f172a" : "white"}
+                  key={i}
+                />
+                <BuildaaLogo />
+                <HapiLogo />
+                <LogoIpsum />
+                <VirtuoLogo />
+              </React.Fragment>
             ))}
           </figure>
         </article>

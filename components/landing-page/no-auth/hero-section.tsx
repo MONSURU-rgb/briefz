@@ -51,13 +51,20 @@ export function HeroSection() {
           </button>
         </article>
       </section>
-
-      <Image
-        src="/images/homepage-system.png"
-        fill
-        className="!relative aspect-auto !h-500 !w-[clamp(500px,45vw,720px)] flex-grow max-[755px]:!w-full"
-        alt="screen image"
-      />
+      <figure>
+        <Image
+          src="/images/homepage-system.png"
+          fill
+          className="!relative aspect-auto !h-500 !w-[clamp(500px,45vw,720px)] flex-grow max-[755px]:!w-full max-[500px]:!hidden"
+          alt="screen image"
+        />
+        <Image
+          src="/images/mobile-image-for-brief-generator.png"
+          fill
+          className="!relative hidden aspect-auto flex-grow max-[755px]:!w-full max-[500px]:!block object-cover"
+          alt="screen image"
+        />
+      </figure>
     </section>
   );
 }
